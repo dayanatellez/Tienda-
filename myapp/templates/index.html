@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrodomésticos</title>
+    <link rel="stylesheet" href="{% static 'styles/estilos.css' %}">
+</head>
+<body>
+    <!-- Encabezado con Menú -->
+    <header class="header">
+        <div class="logo">
+            <h1>Electrodomésticos</h1>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li>
+                    <a href="#">Categorias</a>
+                    <ul class="submenu">
+                        <li><a href="#">Producto 1</a></li>
+                        <li><a href="#">Producto 2</a></li>
+                        <li><a href="#">Producto 3</a></li>
+                    </ul>
+                </li>
+                <li><button class="login-button">Login</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Carrusel -->
+    <div class="slider-box">
+        <ul>
+            <li>
+                <img src="{% static 'images/carrusel1..jpeg' %}" alt="">
+                <div class="texto">
+                    <h2>Imagen 1</h2>
+                    <p>Electrodomésticos que hacen tu vida más fácil</p>
+                </div>
+            </li>
+            <li>
+                <img src="{% static 'images/carrusel2.2.webp' %}" alt="">
+                <div class="texto">
+                    <h2>Imagen 2</h2>
+                    <p>Tecnología al mejor precio</p>
+                </div>
+            </li>
+            <li>
+                <img src="{% static 'images/carrusel5.jpg' %}" alt="">
+                <div class="texto">
+                    <h2>Imagen 3</h2>
+                    <p>Innovación y calidad</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>

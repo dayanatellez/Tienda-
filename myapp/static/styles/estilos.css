@@ -1,0 +1,229 @@
+/* Reset de estilos */ 
+* {     
+    margin: 0;     
+    padding: 0;     
+    box-sizing: border-box;     
+    font-family: 'Poppins', Arial, Helvetica, sans-serif; 
+}  
+
+body {     
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}  
+
+.titulo {     
+    text-align: center;     
+    font-size: 45px;     
+    padding: 30px 0;     
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    position: relative;
+}  
+
+.titulo::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(to right, #3498db, #2980b9);
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+.slider-box {     
+    width: 80%;     
+    max-width: 1000px;     
+    height: 500px;     
+    margin: 30px auto;     
+    overflow: hidden;     
+    position: relative;     
+    border-radius: 20px;     
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    background: #fff;
+    padding: 0; /* Eliminado el padding */
+    border: none; /* Eliminado el borde */
+}  
+
+.slider-box ul {     
+    display: flex;     
+    width: calc(100% * 3);     
+    transition: transform 1s ease-in-out;
+    animation: slider 15s infinite;
+    height: 100%;
+    margin: 0; /* Aseguramos que no haya margen */
+}  
+
+@keyframes slider {
+    0%, 30% {
+        transform: translateX(0);
+    }
+    33%, 63% {
+        transform: translateX(-33.33%);
+    }
+    66%, 96% {
+        transform: translateX(-66.66%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.slider-box li {     
+    width: calc(100% / 3);     
+    list-style: none;     
+    flex-shrink: 0;     
+    text-align: center;     
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    padding: 0; /* Eliminado el padding */
+}  
+
+.slider-box img {     
+    width: 100%;     
+    height: 100%;     
+    object-fit: cover;     
+    display: block;     
+    border-radius: 0; /* Eliminados los bordes redondeados de las imágenes */
+    transition: transform 0.3s ease;
+}  
+
+.texto {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+    padding: 20px;
+    text-align: left;
+}
+
+.texto h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.texto p {
+    font-size: 16px;
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+/* Efecto hover en las imágenes */
+.slider-box li:hover img {
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .slider-box {
+        width: 95%;
+        height: 400px;
+    }
+    
+    .titulo {
+        font-size: 32px;
+    }
+    
+    .texto h2 {
+        font-size: 20px;
+    }
+    
+    .texto p {
+        font-size: 14px;
+    }
+}
+
+/* Estilos del encabezado */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header .logo h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul li {
+    position: relative;
+    margin: 0 10px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 10px 15px;
+    transition: background 0.3s;
+}
+
+.menu ul li a:hover {
+    background-color: #34495e;
+    border-radius: 5px;
+}
+
+.menu ul li .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #34495e;
+    padding: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.menu ul li:hover .submenu {
+    display: block;
+}
+
+.menu ul li .submenu li {
+    margin: 0;
+}
+
+.menu ul li .submenu li a {
+    display: block;
+    padding: 10px 20px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.menu ul li .submenu li a:hover {
+    background-color: #1abc9c;
+}
+
+.login-button {
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.login-button:hover {
+    background-color: #16a085;
+}
